@@ -1,0 +1,30 @@
+#menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .menu {
+    nav + section + section {
+      border-top: solid 1px #444;
+    }
+  }
+}
+
+// mobile-landscape and tablet-potrait
+@media only screen and (min-width: 480px) {
+
+} // media 480
+
+// tablet-landscape and small laptops
+@media only screen and (min-width: 768px) {
+  
+} // media 768
+
+// laptops and desktop
+@media only screen and (min-width: 1200px) {
+
+} // media 1200
+
+// 2k
+@media only screen and (min-width: 1998px) {
+
+} // media 2k

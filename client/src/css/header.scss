@@ -1,0 +1,81 @@
+header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  background-color: #9f9f9f;
+  padding: 15px;
+
+  .logo {
+    height: 80px;
+  }
+
+  nav {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 55%;
+    max-width: 700px;
+    margin: 0 auto;
+    a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #000;
+      &:hover {
+        color: $orange-color;
+      }
+      &:active {
+        color: $blue-color;
+      }
+    }
+  } // nav
+
+  .menu-button {
+    height: 36px;
+    width: 36px;
+    fill: chocolate;
+    &:hover {
+      fill: coral;
+    }
+    &:active {
+      fill: darkgoldenrod;
+    }
+  }
+
+} // header
+
+//--------------------------------------------------------------------------
+
+// mobile-landscape and tablet-potrait
+@media only screen and (min-width: 480px) {
+  header {
+    nav {
+      display: flex;
+    }
+  }
+}
+// tablet-landscape and small laptops
+@media only screen and (min-width: 768px) {
+  header {
+   
+  }
+}
+// laptops and desktop
+@media only screen and (min-width: 1200px) {
+  header {
+   
+  }
+}
+// 2k
+@media only screen and (min-width: 1990px) {
+  header {
+   
+  }
+}

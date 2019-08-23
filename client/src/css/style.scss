@@ -1,0 +1,36 @@
+@import 'fonts.scss';
+@import 'header.scss';
+@import 'main.scss';
+@import 'footer.scss';
+@import 'menu.scss';
+//--------------------------------------------------------------------------
+
+body {
+  box-sizing: border-box;
+  min-width: 320px;
+  max-width: 2560px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+//--------------------------------------------------------------------------
+
+// mobile-landscape and tablet-potrait
+@media only screen and (min-width: 480px) {
+
+} // media 480
+
+// tablet-landscape and small laptops
+@media only screen and (min-width: 768px) {
+  
+} // media 768
+
+// laptops and desktop
+@media only screen and (min-width: 1200px) {
+
+} // media 1200
+
+// 2k
+@media only screen and (min-width: 1998px) {
+
+} // media 2k

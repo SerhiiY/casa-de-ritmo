@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'Overpass SemiBold 600';
+  src: url('../fonts/Overpass/Overpass-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Regular 400';
+  src: url('../fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Bold 700';
+  src: url('../fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf');
+}
+
+$p-font: 'Source Sans Pro Regular 400';
+$h-font: 'Overpass SemiBold 600';
+$btn-font: 'Source Sans Pro Bold 700';
+
+$orange-color: #ef6c00;
+$blue-color: #283593;
+
+h1 {
+  font-family: $h-font;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0;
+}
+
+h2 {
+  font-family: $h-font;
+  font-size: 26px;
+  line-height: 31px;
+  margin: 0;
+}
+
+h3, h4 {
+  font-family: $h-font;
+  font-size: 22px;
+  line-height: 26px;
+  margin: 0;
+}
+
+h5 {
+  font-family: $p-font;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.p1, a {
+  font-family: $p-font;
+  font-size: 18px;
+  line-height: 26px;
+  color: #222;
+}
+
+.p2 {
+  font-family: $p-font;
+  font-size: 16px;
+  line-height: 22px;
+  color: #444;
+}
+
+.p3 {
+  font-family: $p-font;
+  font-size: 14px;
+  line-height: 20px;
+  color: #666;
+}
+
+//--------------------------------------------------------------------------
+
+// mobile-landscape and tablet-potrait
+@media only screen and (min-width: 480px) {
+
+} // media 480
+
+// tablet-landscape and small laptops
+@media only screen and (min-width: 768px) {
+  h1, h2 {
+    font-size: 42px;
+    line-height: 51px;
+  }
+
+  h3 {
+    font-size: 26px;
+    line-height: 31px;
+  }
+
+  h5 {
+    font-size: 18px;
+    line-height: 21px;
+  }
+} // media 768
+
+// laptops and desktop
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+} // media 1200
+
+// 2k
+@media only screen and (min-width: 1998px) {
+
+} // media 2k
