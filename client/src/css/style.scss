@@ -3,6 +3,8 @@
 @import 'main.scss';
 @import 'footer.scss';
 @import 'menu.scss';
+@import 'modal.scss';
+
 //--------------------------------------------------------------------------
 
 body {
@@ -11,6 +13,11 @@ body {
   max-width: 2560px;
   margin: 0 auto;
   text-align: center;
+
+  .hidden{
+    opacity: 0;
+    display: none;
+  }
 }
 
 //--------------------------------------------------------------------------
