@@ -3,22 +3,32 @@ main {
   text-align: center;
   width: 100%;
   min-height: 50vh;
-
+  background-color: #888;
   $text-color: rgb(243, 239, 30);
 
   article {
     box-sizing: border-box;
     display: block;
+    margin: auto;
     width: 100%;
+    max-width: 768px;
     padding: 15px;
     text-align: center;
-    background-color: #888;
     color: $text-color;
     .p1, .p2, .p3 {
       color: $text-color;
     }
     img {
       height: 200px;
+    }
+
+    .gMaps {
+      display: block;
+      width: 100%;
+      max-width: 768px;
+      height: 50vw;
+      margin: auto;
+      border: 0;
     }
   }
   
