@@ -2,11 +2,12 @@ main {
   box-sizing: border-box;
   text-align: center;
   width: 100%;
+  text-align: center;
 
   article {
     box-sizing: border-box;
     display: block;
-    margin: 0;
+    margin: auto;
     width: 100%;
     max-width: 480px;
     padding: 20px;
