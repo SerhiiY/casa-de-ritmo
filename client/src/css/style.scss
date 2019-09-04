@@ -9,10 +9,15 @@
 
 body {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-width: 320px;
   max-width: 2560px;
+  min-height: 100vh;
   margin: 0 auto;
   text-align: center;
+  background-color: #888;
 
   a{
     font-size: 120%;

@@ -2,21 +2,19 @@ main {
   box-sizing: border-box;
   text-align: center;
   width: 100%;
-  min-height: 70vh;
-  background-color: #888;
 
   article {
     box-sizing: border-box;
     display: block;
-    margin: auto;
+    margin: 0;
     width: 100%;
     max-width: 480px;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
     color: $text-color;
     h1, h2 {
       color: $h-color;
-      margin: 10px auto;
+      margin: 0 auto 5vh auto;
     }
     .p1, .p2, .p3 {
       color: $text-color;
