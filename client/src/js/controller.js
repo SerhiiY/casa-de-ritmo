@@ -2,6 +2,7 @@ import mainPageReact from './pages/main-page.js';
 import contactsPageReact from './pages/contacts-page.js';
 import aboutUsPageReact from './pages/about-us-page.js';
 import menuReact from './modals/menu.js';
+import gMapsReact from './modals/gMaps.js';
 
 export default class Controller {
   constructor(model, view) {
@@ -19,12 +20,27 @@ export default class Controller {
     this.contactsPageDOM = contactsPageReact;
     this.aboutUsPageDOM = aboutUsPageReact;
     this.menuDOM = menuReact;
+    this.gMapsDOM = gMapsReact;
 
-    // this.renderPageWithServerData(`/pages/main-page`, this.mainPageDOM, this.mainContainer);
     this.view.render(this.mainPageDOM(), this.mainContainer)
 
     this.menuBtn = document.querySelector('.menu-button');
+    this.fbIcon =  document.querySelector('.fb-icon');
+    this.gMapsIcon = document.querySelector('.gMaps-icon');
+
     this.addMenuBtnClickListener(this.menuBtn);
+    this.fbIcon.addEventListener('click', () => window.location.href = 'https://www.facebook.com/CasaDeRitmo/');
+    this.gMapsIcon.addEventListener('click', () => {
+
+      this.view.render(this.gMapsDOM(), this.modalContainer);
+      this.view.showModalBgSmoothly(this.modalContainer);
+    });
+    this.modalContainer.addEventListener('click', (event) => {
+      const target = event.target;
+      if(target.nodeName === "DIV" || target.nodeName === "A") {
+        this.view.hideModalBgSmoothly(this.modalContainer);
+      }
+    });//modalContinerEventListener
 
     // add events for navigation bar links ---------------------------------------------------------
     this.navs = document.body.querySelectorAll('#nav');
@@ -88,15 +104,6 @@ export default class Controller {
       this.addLinkClickListener(coursesNav, '#business', null, this.mainPageDOM, this.mainContainer);
       this.addLinkClickListener(coursesNav, '#relationships', null, this.mainPageDOM, this.mainContainer);
       this.addLinkClickListener(coursesNav, '#dance-trainer', null, this.mainPageDOM, this.mainContainer);
-
-      this.modalContainer.addEventListener('click', (event) => {
-        const target = event.target;
-        if(target.nodeName === "DIV" || target.nodeName === "A") {
-          this.view.hideModalBgSmoothly(this.modalContainer);
-          // this.view.hideMenuSmoothly(this.menu);
-        }
-
-      });//modalContinerEventListener
 
     });//btnEventListener
   }//giveMenuButtonClickListener

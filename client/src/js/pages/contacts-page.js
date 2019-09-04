@@ -4,19 +4,19 @@ export default function contactsPage() {
   const data =
 //------------------------------HTML----------------------------------------------------
     <article className="contacts-page">
+      <h1>Join our school as soon as possible!</h1>
+      <img src="./img/contacts-page/main.jpg" alt="img1"></img>
 
       <section className="main-info">
-        <img src="./img/contacts-page/main.jpg" alt="img1"></img>
-        <h1>Join our school as soon as possible!</h1>
         <h3>There you can find several ways to contact us</h3>
       </section>
 
-      <aside className="second-info">
+      <section className="second-info">
         <p className="p1">We are placed in a suitable place in the city centre</p>
         <p className="p2">You can go to us by subway, bus, taxi or a car! We have some parkings not far</p>
-      </aside>
+        <p className="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam iusto necessitatibus quo maiores ipsa qui nihil, natus, similique aliquam possimus cupiditate ullam deleniti mollitia, ducimus reiciendis ab quis cumque. Aliquam sint facilis fugiat facere. Eius, eligendi officia omnis rerum similique illo perferendis minima officiis distinctio non nulla itaque sint obcaecati odio cum tenetur. Perspiciatis atque culpa repudiandae suscipit vitae laudantium labore ex consequuntur quia. Beatae minima deleniti assumenda maiores officia magnam repellendus illum veniam. Dicta aperiam sapiente explicabo aut dignissimos ipsam nihil? Unde, aperiam! Perspiciatis totam eligendi non maiores odit? Explicabo facere laborum corporis ab. Ipsa distinctio atque officiis quidem.</p>
+      </section>
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.4676814118775!2d30.506715658401344!3d50.45101519851016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce5eb9ce91ad%3A0x432dbc832355e141!2sCasaDeRitmo%20salsa%20school!5e0!3m2!1sru!2sua!4v1567504199278!5m2!1sru!2sua" className="gMaps" frameBorder="0"></iframe>
     </article>
 //------------------------------HTML----------------------------------------------------
   ;

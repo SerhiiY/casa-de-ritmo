@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Casa de ritmo TEST</title>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script></head>
+</head>
 <body>
-  <!-- <aside class="loaderArea">
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  
+  <div class="loaderArea">
     <div class="loaderArea__loader">
       <div class="loaderArea__loader--item-1"></div>
       <div class="loaderArea__loader--item-2"></div>
@@ -15,17 +18,111 @@
       <div class="loaderArea__loader--item-4"></div>
       <div class="loaderArea__loader--item-5"></div>
     </div>
-  </aside>
+  </div>
+
+  <style>
+    @keyframes scale {
+      0% {ransform: scale(1);}
+      50%,
+      75% {transform: scale(2.5);}
+      78%, 
+      100% {opacity: 0;}
+    }
+
+    .loaderArea {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgb(180, 180, 180);
+      z-index: 999;
+    }
+
+    .loaderArea__loader {
+        display: flex;
+        height: 100vh;
+        margin: auto;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        animation-delay: 1s;
+    }
+
+    .loaderArea__loader--item-1, 
+    .loaderArea__loader--item-2, 
+    .loaderArea__loader--item-3, 
+    .loaderArea__loader--item-4, 
+    .loaderArea__loader--item-5 {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .loaderArea__loader--item-1 {
+      background-color: #eed968;
+    }
+    .loaderArea__loader--item-2 {
+      background-color: #eece68;
+    } 
+    .loaderArea__loader--item-3 {
+      background-color: #eec368;
+    } 
+    .loaderArea__loader--item-4 {
+      background-color: #eead68;
+    } 
+    .loaderArea__loader--item-5 {
+      background-color: #ee8c68;
+    }
+
+    .loaderArea__loader--item-1::before, 
+    .loaderArea__loader--item-2::before, 
+    .loaderArea__loader--item-3::before, 
+    .loaderArea__loader--item-4::before, 
+    .loaderArea__loader--item-5::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+      transform: scale(1);
+    }
+    .loaderArea__loader--item-1::before {
+      background-color: #eed968;
+      animation-delay: 200ms;
+    }
+    .loaderArea__loader--item-2::before {
+      background-color: #eece68;
+      animation-delay: 400ms;
+    }
+    .loaderArea__loader--item-3::before {
+      background-color: #eec368;
+      animation-delay: 600ms;
+    }
+    .loaderArea__loader--item-4::before {
+      background-color: #eead68;
+      animation-delay: 800ms;
+    }
+    .loaderArea__loader--item-5::before {
+      background-color: #ee8c68;
+      animation-delay: 1000ms;
+    }
+  </style>
 
   <script>
-    window.onload = () => {
-      const loaderArea = document.querySelector('.loaderArea');
-    }
-    window.loaded = () => {
-
-    }
+    $(window).on('load', function () {
+      $preloader = $('.loaderArea'),
+      $preloader.fadeOut();
+      $preloader.delay(350).fadeOut('slow');
+    });
   </script>
- -->
+
   <header>
     <img src="./img/header/logo.png" alt="logo" class="logo">
 
@@ -36,7 +133,7 @@
       </nav>
 
     <svg class="menu-button" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-      viewBox="0 0 56 56" style="enable-background:new 0 0 56 56;" xml:space="preserve">
+      width="40px" height="40px" viewBox="0 0 56 56" style="enable-background:new 0 0 56 56;" xml:space="preserve">
       <path d="M8,40c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S12.411,40,8,40z"/>
       <path d="M28,40c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S32.411,40,28,40z"/>
       <path d="M48,40c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S52.411,40,48,40z"/>
@@ -60,6 +157,31 @@
       <a href="" id="about-us-page">About</a>
       <a href="" id="contacts-page">Contacts</a>
     </nav>
+
+    <nav class="networks">
+
+      <svg class="gMaps-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
+        width="36px" height="36px" fill="#DB4437" viewBox="0 0 257.853 257.853" style="enable-background:new 0 0 257.853 257.853;" xml:space="preserve">
+      <path d="M6.02,103.222V251l11.46,6.37l64.541-40.124l91.35,40.608l7.006-0.484l67.917-42.222l3.54-6.37V61l-11.46-6.37
+        l-64.542,40.124L151.31,83.854c2.407-6.428,3.605-12.365,3.605-17.854c0-36.393-29.607-66-66-66s-66,29.607-66,66
+        c0,6.047,1.453,12.637,4.377,19.829L9.56,96.853L6.02,103.222z M88.915,15c28.166,0,51,22.833,51,51s-51,76-51,76s-51-47.834-51-76
+        S60.748,15,88.915,15z M21.02,107.391l13.04-8.106c4.523,7.653,10.438,15.905,17.777,24.815
+        c13.211,16.039,26.267,28.327,26.816,28.842l10.262,9.624l10.262-9.624c0.549-0.515,13.605-12.803,26.816-28.842
+        c7.944-9.645,14.221-18.519,18.869-26.697l28.51,12.673l7.006-0.484l56.457-35.098v130.116l-61.001,37.923l-91.35-40.608
+        l-7.006,0.484L21.02,237.506V107.391z M118.915,65c0-16.542-13.458-30-30-30s-30,13.458-30,30s13.458,30,30,30
+        S118.915,81.542,118.915,65z M73.915,65c0-8.271,6.729-15,15-15s15,6.729,15,15s-6.729,15-15,15S73.915,73.271,73.915,65z"/>
+      </svg>
+
+      <svg class="fb-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="40px" height="40px" fill="#4267B2" viewBox="0 0 60.734 60.733" style="enable-background:new 0 0 60.734 60.733;"
+        xml:space="preserve">
+        <path d="M57.378,0.001H3.352C1.502,0.001,0,1.5,0,3.353v54.026c0,1.853,1.502,3.354,3.352,3.354h29.086V37.214h-7.914v-9.167h7.914
+          v-6.76c0-7.843,4.789-12.116,11.787-12.116c3.355,0,6.232,0.251,7.071,0.36v8.198l-4.854,0.002c-3.805,0-4.539,1.809-4.539,4.462
+          v5.851h9.078l-1.187,9.166h-7.892v23.52h15.475c1.852,0,3.355-1.503,3.355-3.351V3.351C60.731,1.5,59.23,0.001,57.378,0.001z"/>
+      </svg>
+
+    </nav>
+
   </footer>
 <script type="text/javascript" src="bundle.js"></script></body>
 </html>
