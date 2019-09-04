@@ -1,10 +1,10 @@
 header {
   box-sizing: border-box;
   display: flex;
+  position: sticky;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
   top: 0;
   text-align: center;
   width: 100%;
@@ -15,16 +15,15 @@ header {
     height: 60px;
   }
 
-  nav {
+  #nav {
     display: none;
     overflow-wrap: break-word;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 55%;
-    max-width: 700px;
-    margin: 0 auto;
+    min-width: 270px;
+    max-width: 768px;
     opacity: 0;
 
     a {
@@ -40,15 +39,27 @@ header {
     }
   } // nav
 
-  .menu-button {
-    height: 36px;
-    width: 36px;
-    fill: #eed968;
-    &:hover {
-      fill: #eece68;
+  .networks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    svg {
+      margin: 10px;
+      &:hover {
+        fill: rgb(222, 222, 222);
+      }
     }
-    &:active {
-      fill: #eec368;
+    .menu-button {
+      height: 36px;
+      width: 36px;
+      fill: #eed968;
+      &:hover {
+        fill: #eece68;
+      }
+      &:active {
+        fill: #eec368;
+      }
     }
   }
 } // header
@@ -58,17 +69,17 @@ header {
 // mobile-landscape and tablet-potrait
 @media only screen and (min-width: 480px) {
   header {
-    nav {
-      display: flex;
-      animation: nav 1s;
-      opacity: 1;
-    }
+
   }
 }
 // tablet-landscape and small laptops
 @media only screen and (min-width: 768px) {
   header {
-   
+    #nav {
+      display: flex;
+      animation: nav 1s;
+      opacity: 1;
+    }
   }
 }
 // laptops and desktop
