@@ -97,14 +97,14 @@ h5 {
 } // media 768
 
 // laptops and desktop
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   h1 {
     font-size: 50px;
     line-height: 60px;
   }
-} // media 1200
+} // media 1024
 
-// 2k
-@media only screen and (min-width: 1998px) {
+// wide screen
+@media only screen and (min-width: 1600px) {
 
-} // media 2k
+}//wide screen

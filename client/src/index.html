@@ -7,7 +7,7 @@
   <title>Casa de ritmo TEST</title>
 </head>
 <body>
-
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------- -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   
   <div class="loaderArea">
@@ -122,14 +122,14 @@
       $preloader.delay(350).fadeOut('slow');
     });
   </script>
-
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------- -->
   <header>
     <img src="./img/header/logo.png" alt="logo" class="logo">
 
     <nav id="nav">
-      <a href="" id="main-page">Main</a>
-      <a href="" id="about-us-page">About</a>
-      <a href="" id="contacts-page">Contacts</a>
+      <a href="#main" id="main-page">Main</a>
+      <a href="#main" id="about-us-page">About</a>
+      <a href="#main" id="contacts-page">Contacts</a>
     </nav>
 
     <nav class="networks">
@@ -178,17 +178,18 @@
       </svg>
     </nav>
   </header>
-    
-  <div id="modal-container" class="modal-backdrop hidden"></div>
 
-  <main>
+  <div id="modal-container" class="modal-backdrop hidden">
+  </div>
+
+  <main id="main">
   </main>
 
   <footer>
     <nav id="nav">
-      <a href="" id="main-page">Main</a>
-      <a href="" id="about-us-page">About</a>
-      <a href="" id="contacts-page">Contacts</a>
+      <a href="#main" id="main-page">Main</a>
+      <a href="#main" id="about-us-page">About</a>
+      <a href="#main" id="contacts-page">Contacts</a>
     </nav>
 
   </footer>

@@ -1,4 +1,4 @@
-import './js/pages-handler';
-import "./css/style.scss";
+import './js/pages-handler/handler';
+import './js/modals-handler/handler';
 
-// pagesHandler();
+import "./css/style.scss";

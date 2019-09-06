@@ -12,6 +12,8 @@
   position: fixed;
   top: 0;
   left: 0;
+  min-width: 320px;
+  min-height: 320px;
   width: 100vw;
   height: 120vh;
   background-color: rgba(37, 45, 58, 0.7);
@@ -40,32 +42,39 @@
   top: 50vh;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100vmin;
-  height: 100vmin;
-  max-width: 800px;
+  width: 66vmax;
+  height: 66vmax;
   min-width: 320px;
   min-height: 320px;
-  max-height: 600px;
+  max-width: 100vw;
+  max-height: 100vh;
   border: 0;
 }
 
 
 // mobile-landscape and tablet-potrait
 @media only screen and (min-width: 480px) {
-
-} // media 480
+}//media 480
 
 // tablet-landscape and small laptops
 @media only screen and (min-width: 768px) {
-
-} // media 768
+  .gMaps {
+    max-width: 800px;
+  }
+}//media 768
 
 // laptops and desktop
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
 
-} // media 1200
+}//media 1024
 
-// 2k
-@media only screen and (min-width: 1998px) {
+//wide screen
+@media only screen and (min-width: 1600px) {
 
-} // media 2k
+}//wide screen
+
+@media only screen and (min-height: 600px) {
+  .gMaps {
+    max-height: 600px;
+  }
+}

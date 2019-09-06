@@ -38,13 +38,15 @@ main {
   main {
   
   }
-}
+}//media 480
+
 // tablet-landscape and small laptops
 @media only screen and (min-width: 768px) {
   main {
 
   }
-}
+}//media 768
+
 // laptops and desktop
 @media only screen and (min-width: 1024px) {
   main {
@@ -57,12 +59,12 @@ main {
         margin-right: 15px;
       }
     }
-
   }
-}
-// 2k
-@media only screen and (min-width: 1992px) {
+}//media 1024
+
+//wide screen
+@media only screen and (min-width: 1600px) {
   main {
 
   }
-}
+}//wide screen
