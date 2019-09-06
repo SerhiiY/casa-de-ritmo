@@ -27,6 +27,32 @@ body {
     opacity: 0;
     display: none;
   }
+
+  #toTopLink {
+    display: none;
+    position: fixed;
+    right: 10vmin;
+    bottom: 10vmin;
+    height: 14vmin;
+    width: 14vmin;
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  .toTopBtn {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.1, 1.1);
+      transition: 0.3s;
+    }
+    &:active {
+      opacity: 0.6;
+      transition: 0.3s;
+    }
+  }
 }
 
 @keyframes nav {
