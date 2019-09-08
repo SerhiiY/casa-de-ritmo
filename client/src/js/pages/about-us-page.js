@@ -4,17 +4,38 @@ export default function aboutUsPage() {
   const data =
 //------------------------------HTML----------------------------------------------------
     <article className="about-us-page">
-      <h1>About our school</h1>
-      <img src="./img/about-us-page/main.jpg" alt="img1"></img>
+      <h1>О нас</h1>
 
       <section className="main-info">
-        <h3>There is you can find some information about our school and management</h3>
-      </section>
-
-      <section className="second-info">
-        <p className="p1">We provide a lot of facilities and birthdays to feel comfortable and enjoy every evening!</p>
-        <p className="p2">We have well-qualified and experienced teachers with great feeling of humor and with ability to talk about everything!</p>
-        <p className="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam iusto necessitatibus quo maiores ipsa qui nihil, natus, similique aliquam possimus cupiditate ullam deleniti mollitia, ducimus reiciendis ab quis cumque. Aliquam sint facilis fugiat facere. Eius, eligendi officia omnis rerum similique illo perferendis minima officiis distinctio non nulla itaque sint obcaecati odio cum tenetur. Perspiciatis atque culpa repudiandae suscipit vitae laudantium labore ex consequuntur quia. Beatae minima deleniti assumenda maiores officia magnam repellendus illum veniam. Dicta aperiam sapiente explicabo aut dignissimos ipsam nihil? Unde, aperiam! Perspiciatis totam eligendi non maiores odit? Explicabo facere laborum corporis ab. Ipsa distinctio atque officiis quidem.</p>
+        <p className="p1">Впервые о CasaDeRitmo как о первой сальса-школе в Украине узнали в 1997 году. Вскоре школа-студия латиноамериканских клубных танцев была признана лучшей по мнению FORBES.</p>
+        <br></br>
+        <p className="p1">С 2008 г - каждое лето мы проводим <span><a href="#latin-dance-open-air">Latin Dance Open Air</a></span> парке им. Т. Шевченко (Киев) с бесплатными мастер-классами по латине для всех желающих (ждем вас в пятницу и субботу при хорошей погоде🤗).</p>
+        <br></br>
+        <p className="p1">Постоянный резидент #CaribbeanClub (первого латиноамериканского клуба Украины) -  каждый месяц организовываем большие тематические латино-вечеринки.</p>
+        <br></br>
+        <p className="p1">С <b>февраля 2018 школа</b> переименована и функционирует как <b>CasaDeRitmo Latin Dance & Therapy Academy</b>. С этого же года в структуре Академии начала работать Школа педагогов (<b>Dance Teachers School</b>).</p>
+        <br></br>
+        <h4>Специализация Академии:</h4>
+        <br></br>
+        <ul>
+          <li>Сальса (Salsa);</li>
+          <li>Зук (Zouk);</li>
+          <li>Кизомба (Kizomba);</li>
+          <li>Бачата (Bachata);</li>
+          <li>Хореография для детей</li>
+          <li>Современная хореография</li>
+          <li>Обучение педагогов</li>
+          <li>Оздоровительные фитнес программы</li>
+          <li>Пластика тела и танцедвигательная латино-терапия.</li>
+          <li>Body Mind Gestalt Therapy</li>
+          <li>Тренинги личностного роста</li>
+        </ul>
+        <br></br>
+        <p className="p1">С 2019 года делаем первые шаги к присоединению к экологической программе программе #ZeroWeist. </p>
+        <br></br>
+        <p className="p1">Мы всегда идем в ногу со временем и совершенствуемся для Вас!</p>
+        <br></br>
+        <p className="p1">ОСНОВАТЕЛЬ И РУКОВОДИТЕЛЬ - хореограф, психотерапевт, сертифицированный гештальт-терапевт <b>Ирина Бичева</b>.</p>
       </section>
 
     </article>

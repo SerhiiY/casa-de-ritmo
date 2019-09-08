@@ -5,7 +5,36 @@ footer {
   width: 100%;
   background-color: #9f9f9f;
   padding: 10px 20px;
-  
+  text-align: center;
+
+  .networks {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: calc(36px * 6 + 60px);
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    a, svg {
+      display: block;
+      position: relative;
+      width: $icon-size;
+      height: $icon-size;
+      .facebook-air {
+        fill: $fb-green;
+      }
+      img {
+        display: block;
+        position: absolute;
+        width: $icon-size;
+        height: $icon-size;
+      }
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
   #nav {
     display: flex;
     flex-direction: column;
@@ -14,7 +43,7 @@ footer {
     justify-content: space-around;
     flex-wrap: wrap;
     max-width: 700px;
-    margin: 0 auto;
+    margin: auto auto;
     animation: nav 1s;
 
      a {
@@ -29,21 +58,6 @@ footer {
       }
     }
   } // nav
-
-  .networks {
-    display: flex;
-    margin: auto;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    svg {
-      margin: 10px;
-      &:hover {
-        fill: rgb(222, 222, 222);
-      }
-    }
-  }
-
 } // footer
 
 //--------------------------------------------------------------------------
@@ -58,7 +72,9 @@ footer {
 }
 // tablet-landscape and small laptops
 @media only screen and (min-width: 768px) {
-
+  footer {
+    display: none;
+  }
 }
 // laptops and desktop
 @media only screen and (min-width: 1024px) {

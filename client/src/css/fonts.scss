@@ -21,32 +21,29 @@ $orange-color: #ef6c00;
 $blue-color: #283593;
 $text-color: #eed968;
 $h-color: #bbee68;
+$fb-green: #05933f;
+$fb-blue: #4267B2;
+$g-red: #DB4437;
+$icon-size: 32px;
 
 h1 {
-  font-family: $h-font;
-  font-size: 30px;
-  line-height: 36px;
+  font-family: $p-font;
+  font-size: 28px;
+  line-height: 34px;
   margin: 0;
 }
 
 h2 {
-  font-family: $h-font;
+  font-family: $p-font;
   font-size: 26px;
   line-height: 31px;
   margin: 0;
 }
 
 h3, h4 {
-  font-family: $h-font;
+  font-family: $p-font;
   font-size: 22px;
   line-height: 26px;
-  margin: 0;
-}
-
-h5 {
-  font-family: $p-font;
-  font-size: 16px;
-  line-height: 20px;
   margin: 0;
 }
 
@@ -54,21 +51,28 @@ h5 {
   font-family: $p-font;
   font-size: 18px;
   line-height: 26px;
-  color: #222;
+  color: $text-color;
+}
+
+li {
+  font-family: $p-font;
+  font-size: 20px;
+  line-height: 26px;
+  color: $text-color;
 }
 
 .p2 {
   font-family: $p-font;
   font-size: 16px;
   line-height: 22px;
-  color: #444;
+  color: $text-color;
 }
 
 .p3 {
   font-family: $p-font;
   font-size: 14px;
   line-height: 20px;
-  color: #666;
+  color: $text-color;
 }
 
 //--------------------------------------------------------------------------

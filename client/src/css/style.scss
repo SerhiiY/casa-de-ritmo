@@ -1,3 +1,4 @@
+@import 'normalize.scss';
 @import 'fonts.scss';
 @import 'header.scss';
 @import 'main.scss';
@@ -31,12 +32,10 @@ body {
   #toTopLink {
     display: none;
     position: fixed;
-    right: 10vmin;
-    bottom: 10vmin;
-    height: 14vmin;
-    width: 14vmin;
-    max-width: 50px;
-    max-height: 50px;
+    right: 8vmin;
+    bottom: 70px;
+    height: 40px;
+    width: 40px;
   }
 
   .toTopBtn {
@@ -44,14 +43,16 @@ body {
     width: 100%;
     height: 100%;
     transition: 0.3s;
+    opacity: 0.8;
     &:hover {
       transform: scale(1.1, 1.1);
+      opacity: 1;
       transition: 0.3s;
     }
-    &:active {
-      opacity: 0.6;
-      transition: 0.3s;
-    }
+    // &:active {
+    //   opacity: 0.6;
+    //   transition: 0.3s;
+    // }
   }
 }
 
@@ -72,11 +73,11 @@ body {
 } // media 768
 
 // laptops and desktop
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
 
 } // media 1200
 
 // 2k
-@media only screen and (min-width: 1998px) {
+@media only screen and (min-width: 1440px) {
 
 } // media 2k

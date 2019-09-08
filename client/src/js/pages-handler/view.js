@@ -8,7 +8,7 @@ import gMapsDOM from '../modals/gMaps.js';
 
 export default class View {
   constructor() {
-    this.mainContainer = document.querySelector('main');
+    this.mainContainer = document.querySelector('#mainContainer');
     this.modalContainer = document.querySelector('[data-id="modal-container"]');
     this.menuContainer = document.querySelector('[data-id="menu-container"]');
 
