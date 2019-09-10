@@ -17,7 +17,7 @@ main {
   .sidebar {
     display: none;
     position: sticky;
-    top: 52px;
+    top: $logo-height;
     flex-direction: column;
     width: 20vw;
     height: calc(100vh - 52px);

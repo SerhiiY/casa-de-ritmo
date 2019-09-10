@@ -12,12 +12,14 @@ header {
   padding: 10px 20px;
 
   .logo {
-    height: $icon-size;
+    display: block;
+    margin: auto 0;
+    height: $logo-height;
+    line-height: $logo-height;
   }
 
   #nav {
     display: none;
-    overflow-wrap: break-word;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
@@ -38,9 +40,11 @@ header {
     }
   } // nav
   .icons {
+    display: flex;
     height: $icon-size;
     min-width: $icon-size;
-    margin: 0;
+    margin: auto 0;
+    line-height: $logo-height;
     .menu-button {
       height: $icon-size;
       width: $icon-size;
