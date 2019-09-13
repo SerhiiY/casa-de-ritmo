@@ -6,7 +6,11 @@ export default class Controller {
     this.view = view;
 
     this.menuBtn = document.querySelector('.menu-button');
-    this.gMapsBtn = document.querySelector('.gMaps-icon');
+    this.gMapsBtn = {
+      link: document.querySelectorAll('.gMaps-icon'), 
+      pageDOM: this.view.gMapsDOM, 
+      placeToRender: this.view.modalContainer
+    }
 
     this.view.init();
 
@@ -28,19 +32,24 @@ export default class Controller {
   }//renderPageWithServerData
 
 
-  addLinkClickListener({link, pageURL = null, pageDOM, placeToRender = this.view.mainContainer}) {
+  addLinkClickListener(params) {
+    const pageURL = params.hasOwnProperty("pageURL") ? params.pageURL : null;
+    const pageDOM = params.hasOwnProperty("pageDOM") ? params.pageDOM : null;
+    const placeToRender = params.hasOwnProperty("placeToRender") ? params.placeToRender : this.view.mainContainer;
+    const links = Array.from(params.link);
 
-    link.addEventListener('click', (event) => { 
-      event.preventDefault();
+    links.forEach(link => {
+      link.addEventListener('click', (event) => { 
+        event.preventDefault();
 
-      const containerChild = placeToRender.children[0]; //Есть ли сейчас что-то отрисованное в контейнере
-      if(containerChild !== undefined) if(containerChild.className === event.target.className) return;
+        const containerChild = placeToRender.children[0]; //Есть ли сейчас что-то отрисованное в контейнере
+        if(containerChild !== undefined) if(containerChild.className === event.target.className) return;
 
-      if(pageURL !== null) this.renderWithServerData(pageURL, pageDOM, placeToRender);
-      if(pageURL === null) this.view.render(pageDOM(), placeToRender);
-      if(placeToRender.id === "modal-container") this.view.showModal(this.view.modalContainer);
-    });//addEventListener
-
+        if(pageURL !== null) this.renderWithServerData(pageURL, pageDOM, placeToRender);
+        if(pageURL === null) this.view.render(pageDOM(), placeToRender);
+        if(placeToRender.id === "modal-container") this.view.showModal(this.view.modalContainer);
+      });//addEventListener
+    });
   }//giveLinkClickListener
 
 
@@ -56,13 +65,7 @@ export default class Controller {
 
   addButtonsClickListeners() {
     this.menuBtn.addEventListener('click', () => this.view.showMenu(this.menu));//btnEventListener
-    this.addLinkClickListener(
-      {
-      link: this.gMapsBtn, 
-      pageDOM: this.view.gMapsDOM, 
-      placeToRender: this.view.modalContainer
-      }
-    );
+    this.addLinkClickListener(this.gMapsBtn);
   }//addButtonsClickListeners
 
   addLinksClickListeners() {

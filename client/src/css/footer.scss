@@ -14,25 +14,25 @@ footer {
     justify-content: space-between;
     align-items: center;
     margin: auto;
+    
     a, svg {
       display: block;
       position: relative;
       width: $icon-size;
       height: $icon-size;
-      .facebook-air {
-        fill: $fb-green;
-      }
-      img {
-        display: block;
-        position: absolute;
-        width: $icon-size;
-        height: $icon-size;
-      }
-      svg, img {
-        &:hover {
+    }
+    .facebook-air {
+      fill: $fb-green;
+    }
+    img {
+      display: block;
+      position: absolute;
+      width: $icon-size;
+      height: $icon-size;
+    }
+    svg, img {
+      &:hover {
         transform: scale(1.15, 1.15);
-      }
-
       }
     }
   }
