@@ -6,12 +6,11 @@ export default class Controller {
     this.view = view;
 
     this.menuBtn = document.querySelector('.menu-button');
-    this.fbIcon =  document.querySelector('.fb-icon');
-    
+    this.gMapsBtn = document.querySelector('.gMaps-icon');
+
     this.view.init();
 
-    this.navs = document.body.querySelectorAll('#nav');
-    this.menu = document.querySelector('.menu');
+    this.menu = document.querySelector('#menu');
 
     this.init();
     scroll();
@@ -29,59 +28,52 @@ export default class Controller {
   }//renderPageWithServerData
 
 
-  addLinkClickListener(linkContainer, linkSelector, pageURL, pageDOM, placeToRender) {
-    const link = linkContainer.querySelector(linkSelector);
+  addLinkClickListener({link, pageURL = null, pageDOM, placeToRender = this.view.mainContainer}) {
+
     link.addEventListener('click', (event) => { 
       event.preventDefault();
 
-      const containerChild = placeToRender.children[0];
+      const containerChild = placeToRender.children[0]; //Есть ли сейчас что-то отрисованное в контейнере
       if(containerChild !== undefined) if(containerChild.className === event.target.className) return;
 
       if(pageURL !== null) this.renderWithServerData(pageURL, pageDOM, placeToRender);
       if(pageURL === null) this.view.render(pageDOM(), placeToRender);
-      if(placeToRender.dataset.id === "modal-container") this.view.showModal(this.view.modalContainer);
-    });
+      if(placeToRender.id === "modal-container") this.view.showModal(this.view.modalContainer);
+    });//addEventListener
+
   }//giveLinkClickListener
 
 
   hideModalOnClick (modal) {  
     modal.addEventListener('click', (event) => {
       const target = event.target;
-      if(target.dataset.id === "menu-container" || target.className === "page-link") return this.view.hideMenu(this.menu);
-      if(target.dataset.id === "modal-container") return this.view.hideModal(this.view.modalContainer);
+      if(target.id === "menu-container" || target.className === "page-link") return this.view.hideMenu(this.menu);
+      if(target.id === "modal-container") return this.view.hideModal(this.view.modalContainer);
     });//modalEventListener
   } //hideMOdalonClick
 
   //---------------------------------------------disposable------------------------------------------------\\
 
-  addMenuClickListeners() {
-    this.addLinkClickListener(this.menu, '#salsa', null, this.view.mainPageDOM, this.view.mainContainer);
-    this.addLinkClickListener(this.menu, '#bachata', null, this.view.mainPageDOM, this.view.mainContainer);
-    this.addLinkClickListener(this.menu, '#kizomba', null, this.view.mainPageDOM, this.view.mainContainer);
-    this.addLinkClickListener(this.menu, '#zouk', null, this.view.mainPageDOM, this.view.mainContainer);
-    this.addLinkClickListener(this.menu, '#business', null, this.view.mainPageDOM, this.view.mainContainer);
-    this.addLinkClickListener(this.menu, '#relationships', null, this.view.mainPageDOM, this.view.mainContainer);
-    this.addLinkClickListener(this.menu, '#dance-trainer', null, this.view.mainPageDOM, this.view.mainContainer);
-  }//addMenuClickListeners
-
-
   addButtonsClickListeners() {
     this.menuBtn.addEventListener('click', () => this.view.showMenu(this.menu));//btnEventListener
-    this.fbIcon.addEventListener('click', () => window.location.href = 'https://www.facebook.com/CasaDeRitmo/');
-    this.addLinkClickListener(document, '.gMaps-icon', null, this.view.gMapsDOM, this.view.modalContainer);
-    for(const nav of this.navs){
-      this.addLinkClickListener(nav, '#main-page', null, this.view.mainPageDOM, this.view.mainContainer);
-      this.addLinkClickListener(nav, '#about-us-page', null, this.view.aboutUsPageDOM, this.view.mainContainer);
-      this.addLinkClickListener(nav, '#contacts-page', null, this.view.contactsPageDOM, this.view.mainContainer);
-    }
+    this.addLinkClickListener(
+      {
+      link: this.gMapsBtn, 
+      pageDOM: this.view.gMapsDOM, 
+      placeToRender: this.view.modalContainer
+      }
+    );
   }//addButtonsClickListeners
 
+  addLinksClickListeners() {
+
+  }
 
   init() {
     this.hideModalOnClick(this.view.modalContainer);
     this.hideModalOnClick(this.view.menuContainer);
-    this.addMenuClickListeners();
     this.addButtonsClickListeners();
+    this.addLinksClickListeners();
   }
 
 }//class controller------------------------------------------------------------------------------------------------------------------

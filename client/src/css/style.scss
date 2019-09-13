@@ -18,8 +18,12 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   text-align: center;
-  background-color: #888;
-
+  background: url('../img/body/bg-480.jpg') top center no-repeat fixed;
+  background-size: width = 100vw, height = 120vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  
   a{
     font-size: 120%;
   }
@@ -64,7 +68,9 @@ body {
 
 // mobile-landscape and tablet-potrait
 @media only screen and (min-width: 480px) {
-
+  body {
+    background-image: url('../img/body/bg-1024.jpg'); 
+  }
 } // media 480
 
 // tablet-landscape and small laptops
@@ -74,10 +80,14 @@ body {
 
 // laptops and desktop
 @media only screen and (min-width: 1024px) {
-
+  body {
+    background-image: url('../img/body/bg-1600.jpg'); 
+  }
 } // media 1200
 
 // 2k
 @media only screen and (min-width: 1440px) {
-
+  body {
+    background-image: url('../img/body/bg-1920.jpg'); 
+  }
 } // media 2k

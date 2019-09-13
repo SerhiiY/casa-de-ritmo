@@ -8,8 +8,9 @@ header {
   top: 0;
   text-align: center;
   width: 100%;
-  background-color: #9f9f9f;
+  background-color: rgba(80,80,80,0.9);
   padding: 10px 20px;
+  z-index: 10;
 
   .logo {
     display: block;
@@ -24,21 +25,28 @@ header {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    min-width: 270px;
-    max-width: 768px;
+    width: 100%;
+    max-width: 600px;
     opacity: 0;
-
+    margin: 0 15px;
+    
     a {
       text-decoration: none;
-      color: #000;
+      color: $a-color;
+      font-size: 120%;
+      padding: 0 3px;
+      margin: 0 2px;
+      border-left: solid 1px $a-color;
+      border-right: solid 1px $a-color;
       &:hover {
-        color: $orange-color;
+        color: $hover-color;
       }
       &:active {
-        color: $blue-color;
+        color: $click-color;
       }
     }
   } // nav
+
   .icons {
     display: flex;
     height: $icon-size;
@@ -48,12 +56,12 @@ header {
     .menu-button {
       height: $icon-size;
       width: $icon-size;
-      fill: #eed968;
+      fill: $a-color;
       &:hover {
-        fill: #eece68;
+        fill: $hover-color;
       }
       &:active {
-        fill: #eec368;
+        fill: $click-color;
       }
     }//menu-button
   }//icons
@@ -68,6 +76,9 @@ header {
       display: flex;
       animation: nav 1s;
       opacity: 1;
+      a:nth-of-type(4), a:nth-of-type(5) {
+        display: none;
+      }
     }
   }
 }//media 480
@@ -75,9 +86,9 @@ header {
 // tablet-landscape and small laptops
 @media only screen and (min-width: 768px) {
   header {
-    .icons {
-      .networks {
-        display: flex;
+    #nav {
+      a:nth-of-type(4), a:nth-of-type(5) {
+        display: block;
       }
     }
   }

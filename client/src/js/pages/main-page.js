@@ -1,24 +1,49 @@
 import React from 'react';
 
-export default function mainPage () {
-  const data =
+const mainPage = () => (
 //------------------------------HTML----------------------------------------------------
-    <article className="main-page">
-      <h1>Welcome to Casa De Ritmo!</h1>
-      <img src='./img/main-page/main.jpg' alt="img1"></img>
+  <article id="main-page">
 
-      <section className="main-info">
-        <h3>It is the best dance school in the world!</h3>
-      </section>
+    <section className="join-us">
+      <h1>Добро пожаловать в CasaDeRitmo!</h1>
+      <p className="p1">Начать танцевать легко! Приходите к нам, научитесь танцевать — и вы почувствуете, как вместе с танцем в вашу жизнь войдут бодрость, ритм и позитив</p>
+      <button className="join-us-btn"><p className="p1">Записаться на бесплатное занятие</p></button>
+    </section>
 
-      <section className="second-info">
-        <p className="p1">We provide a lot of facilities and birthdays to feel comfortable and enjoy every evening!</p>
-        <p className="p2">We have well-qualified and experienced teachers with great feeling of humor and with ability to talk about everything!</p>
-        <p className="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam iusto necessitatibus quo maiores ipsa qui nihil, natus, similique aliquam possimus cupiditate ullam deleniti mollitia, ducimus reiciendis ab quis cumque. Aliquam sint facilis fugiat facere. Eius, eligendi officia omnis rerum similique illo perferendis minima officiis distinctio non nulla itaque sint obcaecati odio cum tenetur. Perspiciatis atque culpa repudiandae suscipit vitae laudantium labore ex consequuntur quia. Beatae minima deleniti assumenda maiores officia magnam repellendus illum veniam. Dicta aperiam sapiente explicabo aut dignissimos ipsam nihil? Unde, aperiam! Perspiciatis totam eligendi non maiores odit? Explicabo facere laborum corporis ab. Ipsa distinctio atque officiis quidem.</p>
-      </section>
+    <nav id="nav" className="mainPageList">
 
-    </article>
+      <a href="#events-page" id="events-page-link" className="mainPageList__link">
+        <img src="./img/main-page/events.png" alt="Events"></img>
+        <p>Анонсы и афиши</p>
+      </a>
+      <a href="#sales-page" id="sales-page-link" className="mainPageList__link">
+        <img src="./img/main-page/sales.png" alt="Sales"></img>
+        <p>Акции</p>
+      </a>
+      <a href="#schedule-page" id="schedule-page-link" className="mainPageList__link">
+        <img src="./img/main-page/schedule.png" alt="Schedule"></img>
+        <p>Расписание</p>
+      </a>
+      <a href="#latTherapy-page" id="latTherapy-page-link" className="mainPageList__link">
+        <img src="./img/main-page/latTherapy.png" alt="latTherapy"></img>
+        <p>Латинотерапия</p>
+      </a>
+      <a href="#psyTherapy-page" id="psyTherapy-page-link" className="mainPageList__link">
+        <img src="./img/main-page/psyTherapy.png" alt="psyTherapy"></img>
+        <p>Психотерапия</p>
+      </a>
+      <a href="#styles-page" id="styles-page-link" className="mainPageList__link">
+        <img src="./img/main-page/styles.png" alt="Styles"></img>
+        <p>Танцевальные стили</p>
+      </a>
+      <a href="#team-page" id="team-page-link" className="mainPageList__link">
+        <img src="./img/main-page/team.png" alt="Team"></img>
+        <p>Наша команда</p>
+      </a>
+    </nav>
+
+  </article>
 //------------------------------HTML----------------------------------------------------
-  ;
-  return data;
-};
+);
+
+export default mainPage;

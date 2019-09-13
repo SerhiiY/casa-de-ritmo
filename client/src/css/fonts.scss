@@ -17,15 +17,16 @@ $p-font: 'Source Sans Pro Regular 400';
 $h-font: 'Overpass SemiBold 600';
 $btn-font: 'Source Sans Pro Bold 700';
 
-$orange-color: #ef6c00;
-$blue-color: #283593;
+$hover-color: #f1da56;
+$click-color: rgb(219, 194, 55);
 $text-color: #eed968;
 $h-color: #bbee68;
+$a-color: rgb(240, 225, 140);
 $fb-green: #05933f;
 $fb-blue: #4267B2;
 $g-red: #DB4437;
 $icon-size: 32px;
-$logo-height: 42px;
+$logo-height: 32px;
 
 h1 {
   font-family: $p-font;

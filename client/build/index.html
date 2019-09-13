@@ -7,7 +7,7 @@
   <title>Casa de ritmo TEST</title>
 </head>
 <body>
-<!-- ------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------preloader--------------------------------------------------------------------------- -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   
   <div class="loaderArea">
@@ -122,20 +122,21 @@
       $preloader.delay(350).fadeOut('slow');
     });
   </script>
-<!-- ------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------header---------------------------------------------------------------------------- -->
   <header>
     <img src="./img/header/logo.png" alt="logo" class="logo">
 
     <nav id="nav">
-      <a href="#main" id="main-page">Main</a>
-      <a href="#main" id="about-us-page">About</a>
-      <a href="#main" id="contacts-page">Contacts</a>
+      <a href="#main-page" id="main-page-link">Главная</a>
+      <a href="#about-page" id="about-page-link">О нас</a>
+      <a href="#events-page" id="events-page-link">События</a>
+      <a href="#schedule-page" id="schedule-page-link">Расписание</a>
+      <a href="#styles-page" id="styles-page-link">Стили</a>
     </nav>
 
     <section class="icons">
-
       <svg class="menu-button" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        viewBox="0 0 318 318" style="enable-background:new 0 0 318 318;" xml:space="preserve">
+        width="32px" height="32px" viewBox="0 0 318 318" style="enable-background:new 0 0 318 318;" xml:space="preserve">
         <g>
           <path d="M68,3H15C6.729,3,0,9.729,0,18v53c0,8.271,6.729,15,15,15h53c8.271,0,15-6.729,15-15V18C83,9.729,76.271,3,68,3z"/>
           <path d="M185,3h-53c-8.271,0-15,6.729-15,15v53c0,8.271,6.729,15,15,15h53c8.271,0,15-6.729,15-15V18C200,9.729,193.271,3,185,3z"/>
@@ -148,40 +149,43 @@
           <path d="M303,232h-53c-8.271,0-15,6.729-15,15v53c0,8.272,6.729,15,15,15h53c8.271,0,15-6.728,15-15v-53C318,238.729,311.271,232,303,232z"/>
         </g>
       </svg>
-
     </section>
+
   </header>
+<!-- ---------------------------------------------------------backdrops------------------------------------------------------------------------- -->
+  <section id="modal-container" class="modal-backdrop hidden"></section>
 
-  <section data-id="modal-container" class="modal-backdrop hidden"></section>
+  <section id="menu-container" class="modal-backdrop hidden"></section>
 
-  <section data-id="menu-container" class="modal-backdrop hidden"></section>
-
-
+<!-- ---------------------------------------------------------main------------------------------------------------------------------------------ -->
   <main>
-    <aside data-id="left-bar" class="sidebar left-bar">
+    <aside id="sidebar">
       <nav class="networks">
-        <a href="https://t.me/casaderitmo_academy"><img src="./img/footer/telegram.svg" alt="Telegram"></a>
-        <a href="https://www.instagram.com/casaderitmo/"><img src="./img/footer/instagram.svg" alt="Instagram"></a>
+        <a href="https://t.me/casaderitmo_academy"><img src="./img/footer/telegram.svg" style="width:32px; height:32px;" alt="Telegram"></a>
+        <a href="https://www.instagram.com/casaderitmo/"><img src="./img/footer/instagram.svg" style="width:32px; height:32px;" alt="Instagram"></a>
 
-        <svg class="fb-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          width="36px" height="36px" fill="#4267B2" viewBox="0 0 60.734 60.733" style="enable-background:new 0 0 60.734 60.733;" xml:space="preserve">
-          <path d="M57.378,0.001H3.352C1.502,0.001,0,1.5,0,3.353v54.026c0,1.853,1.502,3.354,3.352,3.354h29.086V37.214h-7.914v-9.167h7.914
-            v-6.76c0-7.843,4.789-12.116,11.787-12.116c3.355,0,6.232,0.251,7.071,0.36v8.198l-4.854,0.002c-3.805,0-4.539,1.809-4.539,4.462
-            v5.851h9.078l-1.187,9.166h-7.892v23.52h15.475c1.852,0,3.355-1.503,3.355-3.351V3.351C60.731,1.5,59.23,0.001,57.378,0.001z"/>
-        </svg>
-
-        <a href="https://www.facebook.com/LatinDanceOpenAir/">
-          <svg class="facebook-air" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            width="36px" height="36px" fill="#4267B2" viewBox="0 0 60.734 60.733" style="enable-background:new 0 0 60.734 60.733;" xml:space="preserve">
+        <a href="'https://www.facebook.com/CasaDeRitmo/'">
+          <svg class="facebook-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="32px" height="32px" viewBox="0 0 60.734 60.733" style="enable-background:new 0 0 60.734 60.733;" xml:space="preserve">
             <path d="M57.378,0.001H3.352C1.502,0.001,0,1.5,0,3.353v54.026c0,1.853,1.502,3.354,3.352,3.354h29.086V37.214h-7.914v-9.167h7.914
               v-6.76c0-7.843,4.789-12.116,11.787-12.116c3.355,0,6.232,0.251,7.071,0.36v8.198l-4.854,0.002c-3.805,0-4.539,1.809-4.539,4.462
               v5.851h9.078l-1.187,9.166h-7.892v23.52h15.475c1.852,0,3.355-1.503,3.355-3.351V3.351C60.731,1.5,59.23,0.001,57.378,0.001z"/>
           </svg>
         </a>
-        <a href="https://www.youtube.com/channel/UCsZjPEyhx-mtgmRn4BjXyGw"><img src="./img/footer/youtube.svg" alt="YouTube"></a>
+
+        <a href="https://www.facebook.com/LatinDanceOpenAir/">
+          <svg class="facebook-air" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="32px" height="32px" viewBox="0 0 60.734 60.733" style="enable-background:new 0 0 60.734 60.733;" xml:space="preserve">
+            <path d="M57.378,0.001H3.352C1.502,0.001,0,1.5,0,3.353v54.026c0,1.853,1.502,3.354,3.352,3.354h29.086V37.214h-7.914v-9.167h7.914
+              v-6.76c0-7.843,4.789-12.116,11.787-12.116c3.355,0,6.232,0.251,7.071,0.36v8.198l-4.854,0.002c-3.805,0-4.539,1.809-4.539,4.462
+              v5.851h9.078l-1.187,9.166h-7.892v23.52h15.475c1.852,0,3.355-1.503,3.355-3.351V3.351C60.731,1.5,59.23,0.001,57.378,0.001z"/>
+          </svg>
+        </a>
+
+        <a href="https://www.youtube.com/channel/UCsZjPEyhx-mtgmRn4BjXyGw"><img src="./img/footer/youtube.svg" style="width:32px; height:32px;" alt="YouTube"></a>
 
         <svg class="gMaps-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
-          width="36px" height="36px" fill="#DB4437" viewBox="0 0 257.853 257.853" style="enable-background:new 0 0 257.853 257.853;" xml:space="preserve">
+          width="32px" height="32px" fill="#DB4437" viewBox="0 0 257.853 257.853" style="enable-background:new 0 0 257.853 257.853;" xml:space="preserve">
           <path d="M6.02,103.222V251l11.46,6.37l64.541-40.124l91.35,40.608l7.006-0.484l67.917-42.222l3.54-6.37V61l-11.46-6.37
             l-64.542,40.124L151.31,83.854c2.407-6.428,3.605-12.365,3.605-17.854c0-36.393-29.607-66-66-66s-66,29.607-66,66
             c0,6.047,1.453,12.637,4.377,19.829L9.56,96.853L6.02,103.222z M88.915,15c28.166,0,51,22.833,51,51s-51,76-51,76s-51-47.834-51-76
@@ -192,46 +196,49 @@
             S118.915,81.542,118.915,65z M73.915,65c0-8.271,6.729-15,15-15s15,6.729,15,15s-6.729,15-15,15S73.915,73.271,73.915,65z"/>
         </svg>
       </nav>
-    </aside>
-      
+    </aside> 
 
     <section id="mainContainer"></section>
 
-    <aside data-id="right-bar" class="sidebar right-bar"></aside>
   </main>
-
-
+<!-- ---------------------------------------------------------to-top-btn------------------------------------------------------------------------ -->
   <a id="toTopLink" href="#">
     <svg class="toTopBtn" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-      width="36px" height="36px" fill="#DB4437" viewBox="0 0 155.139 155.139" style="enable-background:new 0 0 155.139 155.139;" xml:space="preserve">
+      width="32px" height="32px" fill="#DB4437" viewBox="0 0 155.139 155.139" style="enable-background:new 0 0 155.139 155.139;" xml:space="preserve">
       <path d="M114.588,45.42h28.17L97.338,0l-45.42,45.42h28.516C76.4,98.937,48.529,142.173,12.381,152.686
         c5.513,1.605,11.224,2.452,17.071,2.452C73.601,155.139,109.94,107.111,114.588,45.42z"/>
     </svg>
   </a>
-
+<!-- ---------------------------------------------------------footer---------------------------------------------------------------------------- -->
   <footer>
     <nav class="networks">
-      <a href="https://t.me/casaderitmo_academy"><img src="./img/footer/telegram.svg" alt="Telegram"></a>
-      <a href="https://www.instagram.com/casaderitmo/"><img src="./img/footer/instagram.svg" alt="Instagram"></a>
+
+      <a href="https://t.me/casaderitmo_academy"><img src="./img/footer/telegram.svg" style="width:32px; height:32px;" alt="Telegram"></a>
+
+      <a href="https://www.instagram.com/casaderitmo/"><img src="./img/footer/instagram.svg" style="width:32px; height:32px;" alt="Instagram"></a>
+
       <a href="https://www.facebook.com/CasaDeRitmo/">
-        <svg class="facebook" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          width="36px" height="36px" fill="#4267B2" viewBox="0 0 60.734 60.733" style="enable-background:new 0 0 60.734 60.733;" xml:space="preserve">
+        <svg class="facebook-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="32px" height="32px" fill="#4267B2" viewBox="0 0 60.734 60.733" style="enable-background:new 0 0 60.734 60.733;" xml:space="preserve">
           <path d="M57.378,0.001H3.352C1.502,0.001,0,1.5,0,3.353v54.026c0,1.853,1.502,3.354,3.352,3.354h29.086V37.214h-7.914v-9.167h7.914
             v-6.76c0-7.843,4.789-12.116,11.787-12.116c3.355,0,6.232,0.251,7.071,0.36v8.198l-4.854,0.002c-3.805,0-4.539,1.809-4.539,4.462
             v5.851h9.078l-1.187,9.166h-7.892v23.52h15.475c1.852,0,3.355-1.503,3.355-3.351V3.351C60.731,1.5,59.23,0.001,57.378,0.001z"/>
         </svg>
       </a>
+
       <a href="https://www.facebook.com/LatinDanceOpenAir/">
         <svg class="facebook-air" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          width="36px" height="36px" fill="#4267B2" viewBox="0 0 60.734 60.733" style="enable-background:new 0 0 60.734 60.733;" xml:space="preserve">
+          width="32px" height="32px" fill="#4267B2" viewBox="0 0 60.734 60.733" style="enable-background:new 0 0 60.734 60.733;" xml:space="preserve">
           <path d="M57.378,0.001H3.352C1.502,0.001,0,1.5,0,3.353v54.026c0,1.853,1.502,3.354,3.352,3.354h29.086V37.214h-7.914v-9.167h7.914
             v-6.76c0-7.843,4.789-12.116,11.787-12.116c3.355,0,6.232,0.251,7.071,0.36v8.198l-4.854,0.002c-3.805,0-4.539,1.809-4.539,4.462
             v5.851h9.078l-1.187,9.166h-7.892v23.52h15.475c1.852,0,3.355-1.503,3.355-3.351V3.351C60.731,1.5,59.23,0.001,57.378,0.001z"/>
         </svg>
       </a>
-      <a href="https://www.youtube.com/channel/UCsZjPEyhx-mtgmRn4BjXyGw"><img src="./img/footer/youtube.svg" alt="YouTube"></a>
+
+      <a href="https://www.youtube.com/channel/UCsZjPEyhx-mtgmRn4BjXyGw"><img src="./img/footer/youtube.svg" style="width:32px; height:32px;" alt="YouTube"></a>
+
       <svg class="gMaps-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
-        width="36px" height="36px" fill="#DB4437" viewBox="0 0 257.853 257.853" style="enable-background:new 0 0 257.853 257.853;" xml:space="preserve">
+        width="32px" height="32px" fill="#DB4437" viewBox="0 0 257.853 257.853" style="enable-background:new 0 0 257.853 257.853;" xml:space="preserve">
         <path d="M6.02,103.222V251l11.46,6.37l64.541-40.124l91.35,40.608l7.006-0.484l67.917-42.222l3.54-6.37V61l-11.46-6.37
           l-64.542,40.124L151.31,83.854c2.407-6.428,3.605-12.365,3.605-17.854c0-36.393-29.607-66-66-66s-66,29.607-66,66
           c0,6.047,1.453,12.637,4.377,19.829L9.56,96.853L6.02,103.222z M88.915,15c28.166,0,51,22.833,51,51s-51,76-51,76s-51-47.834-51-76
@@ -241,8 +248,10 @@
           l-7.006,0.484L21.02,237.506V107.391z M118.915,65c0-16.542-13.458-30-30-30s-30,13.458-30,30s13.458,30,30,30
           S118.915,81.542,118.915,65z M73.915,65c0-8.271,6.729-15,15-15s15,6.729,15,15s-6.729,15-15,15S73.915,73.271,73.915,65z"/>
       </svg>
-    </nav>
 
+    </nav>
   </footer>
+<!-- ---------------------------------------------------------end------------------------------------------------------------------------------- -->
 <script type="text/javascript" src="bundle.js"></script></body>
 </html>
+

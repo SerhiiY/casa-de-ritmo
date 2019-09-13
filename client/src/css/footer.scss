@@ -3,9 +3,8 @@ footer {
   display: block;
   text-align: center;
   width: 100%;
-  background-color: #9f9f9f;
+  background-color: rgba(80,80,80,0.3);
   padding: 10px 20px;
-  text-align: center;
 
   .networks {
     display: flex;
@@ -29,8 +28,11 @@ footer {
         width: $icon-size;
         height: $icon-size;
       }
-      &:hover {
-        opacity: 0.6;
+      svg, img {
+        &:hover {
+        transform: scale(1.15, 1.15);
+      }
+
       }
     }
   }
@@ -49,12 +51,12 @@ footer {
      a {
       margin: 5px;
       text-decoration: none;
-      color: #000;
+      color: $a-color;
       &:hover {
-        color: $orange-color;
+        color: $hover-color;
       }
       &:active {
-        color: $blue-color;
+        color: $click-color;
       }
     }
   } // nav
