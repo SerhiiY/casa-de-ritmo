@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function psyTherapyPage() {
+export default function therapyPage() {
   const data =
 //------------------------------HTML----------------------------------------------------
-    <article id="psyTherapy-page">
+    <article id="therapy-page">
 
       <section>
       </section>

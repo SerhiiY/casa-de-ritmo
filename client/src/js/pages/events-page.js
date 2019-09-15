@@ -1,8 +1,9 @@
 import React from 'react';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 const eventsPage = () => (
-
 //------------------------------HTML----------------------------------------------------
+  <Router>  
     <article id="events-page">
 
       <section>
@@ -10,6 +11,7 @@ const eventsPage = () => (
       </section>
 
     </article>
+  </Router>
 //------------------------------HTML----------------------------------------------------
 );
 

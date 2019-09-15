@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {withRouter, HashRouter as Router} from "react-router-dom";
 const galleryPage = () => (
 //------------------------------HTML----------------------------------------------------
     <article id="gallery-page">
@@ -12,4 +12,4 @@ const galleryPage = () => (
 //------------------------------HTML----------------------------------------------------
 );
 
-export default galleryPage;
+export default withRouter(galleryPage);

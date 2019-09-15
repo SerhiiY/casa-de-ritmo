@@ -1,39 +1,41 @@
 import React from 'react';
-import { HashRouter as Router, Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
-const menu = () => (
-  <Router>
-    <nav id="menu">
+const Menu = () => (
+//------------------------------HTML----------------------------------------------------
+  <nav id="menu">
+    <section className="menu-nav">
       <section>
         <h4>Меню</h4>
-        <Link to='/'>Главная</Link>
-        <Link to='/events'>События</Link>
-        <Link to='/gallery'>Галерея</Link>
+        <Link to='/' className='page-link'>Главная</Link>
+        <Link to='/events' className='page-link'>События</Link>
+        <Link to='/gallery' className='page-link'>Галерея</Link>
       </section>
       <section>
         <h4>О нас</h4>
-        <Link to='/about'>О нас</Link>
-        <Link to='/team'>Команда</Link>
-        <Link to='/styles'>Стили</Link>
-        <Link to='/news'>Новости</Link>
+        <Link to='/about' className='page-link'>О нас</Link>
+        <Link to='/team' className='page-link'>Команда</Link>
+        <Link to='/styles' className='page-link'>Стили</Link>
+        <Link to='/news' className='page-link'>Новости</Link>
       </section>
       <section>
         <h4>Занятия</h4>
-        <Link to='/schedule'>Расписание</Link>
-        <Link to='/sales'>Акции</Link>
-        <Link to='/prices'>Цены</Link>
-        <Link to='/indiv'>Индивидуальные занятия</Link>
-        <Link to='/wedding'>Постановка свадебного танца</Link>
+        <Link to='/schedule' className='page-link'>Расписание</Link>
+        <Link to='/sales' className='page-link'>Акции</Link>
+        <Link to='/prices' className='page-link'>Цены</Link>
+        <Link to='/indiv' className='page-link'>Индивидуальные занятия</Link>
+        <Link to='/wedding' className='page-link'>Постановка свадебного танца</Link>
       </section>
       <section>
         <h4>Услуги</h4>
-        <Link to='/psy-therapy'>Психотерапия</Link>
-        <Link to='/lat-therapy'>Латинотерапия</Link>
-        <Link to='/yoga'>Йога</Link>
-        <Link to='/rent'>Аренда залов</Link>
+        <Link to='/therapy/#psy' className='page-link'>Психотерапия</Link>
+        <Link to='/therapy/#lat' className='page-link'>Латинотерапия</Link>
+        <Link to='/yoga' className='page-link'>Йога</Link>
+        <Link to='/rent' className='page-link'>Аренда залов</Link>
       </section>
-    </nav>
-    </Router>
+    </section>
+  </nav>
+//------------------------------HTML----------------------------------------------------
 );
 
-export default menu;
+export default Menu;

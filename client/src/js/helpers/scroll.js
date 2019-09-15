@@ -7,7 +7,7 @@ export default function () {
       $('#toTopLink').fadeOut();
     }
   });
-  $('a[href*=#]').click(function() {
+  $('a[href*=#toTop]').click(function() {
     event.preventDefault();
     $('body,html').animate({scrollTop:-100},500);
   });

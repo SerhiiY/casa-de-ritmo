@@ -1,11 +1,12 @@
 import React from 'react';
 
-export default function latTherapyPage() {
+export default function notFoundPage() {
   const data =
 //------------------------------HTML----------------------------------------------------
-    <article id="latTherapy-page">
+    <article id="not-found-page">
 
       <section>
+        <h1>Page not found</h1>
       </section>
 
     </article>

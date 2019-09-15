@@ -6,252 +6,129 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Casa de ritmo TEST</title>
 </head>
-<body>
-<!-- -------------------------------------------------------preloader--------------------------------------------------------------------------- -->
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<!-- -------------------------------------preloader--------------------------------------------------------------------------- -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   
-  <div class="loaderArea">
-    <div class="loaderArea__loader">
-      <div class="loaderArea__loader--item-1"></div>
-      <div class="loaderArea__loader--item-2"></div>
-      <div class="loaderArea__loader--item-3"></div>
-      <div class="loaderArea__loader--item-4"></div>
-      <div class="loaderArea__loader--item-5"></div>
-    </div>
+<div class="loaderArea">
+  <div class="loaderArea__loader">
+    <div class="loaderArea__loader--item-1"></div>
+    <div class="loaderArea__loader--item-2"></div>
+    <div class="loaderArea__loader--item-3"></div>
+    <div class="loaderArea__loader--item-4"></div>
+    <div class="loaderArea__loader--item-5"></div>
   </div>
+</div>
 
-  <style>
-    @keyframes scale {
-      0% {ransform: scale(1);}
-      50%,
-      75% {transform: scale(2.5);}
-      78%, 
-      100% {opacity: 0;}
-    }
+<style>
+  @keyframes scale {
+    0% {ransform: scale(1);}
+    50%,
+    75% {transform: scale(2.5);}
+    78%, 
+    100% {opacity: 0;}
+  }
 
-    .loaderArea {
-      display: block;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgb(180, 180, 180);
-      z-index: 999;
-    }
+  .loaderArea {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(80, 80, 80);
+    z-index: 999;
+  }
 
-    .loaderArea__loader {
-        display: flex;
-        height: 100vh;
-        margin: auto;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        animation-delay: 1s;
-    }
-
-    .loaderArea__loader--item-1, 
-    .loaderArea__loader--item-2, 
-    .loaderArea__loader--item-3, 
-    .loaderArea__loader--item-4, 
-    .loaderArea__loader--item-5 {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      margin: 7px;
+  .loaderArea__loader {
       display: flex;
+      height: 100vh;
+      margin: auto;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
-    }
-    .loaderArea__loader--item-1 {
-      background-color: #eed968;
-    }
-    .loaderArea__loader--item-2 {
-      background-color: #eece68;
-    } 
-    .loaderArea__loader--item-3 {
-      background-color: #eec368;
-    } 
-    .loaderArea__loader--item-4 {
-      background-color: #eead68;
-    } 
-    .loaderArea__loader--item-5 {
-      background-color: #ee8c68;
-    }
+      overflow: hidden;
+      animation-delay: 1s;
+  }
 
-    .loaderArea__loader--item-1::before, 
-    .loaderArea__loader--item-2::before, 
-    .loaderArea__loader--item-3::before, 
-    .loaderArea__loader--item-4::before, 
-    .loaderArea__loader--item-5::before {
-      content: '';
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      opacity: 0.7;
-      animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
-      transform: scale(1);
-    }
-    .loaderArea__loader--item-1::before {
-      background-color: #eed968;
-      animation-delay: 200ms;
-    }
-    .loaderArea__loader--item-2::before {
-      background-color: #eece68;
-      animation-delay: 400ms;
-    }
-    .loaderArea__loader--item-3::before {
-      background-color: #eec368;
-      animation-delay: 600ms;
-    }
-    .loaderArea__loader--item-4::before {
-      background-color: #eead68;
-      animation-delay: 800ms;
-    }
-    .loaderArea__loader--item-5::before {
-      background-color: #ee8c68;
-      animation-delay: 1000ms;
-    }
-  </style>
+  .loaderArea__loader--item-1, 
+  .loaderArea__loader--item-2, 
+  .loaderArea__loader--item-3, 
+  .loaderArea__loader--item-4, 
+  .loaderArea__loader--item-5 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loaderArea__loader--item-1 {
+    background-color: #eed968;
+  }
+  .loaderArea__loader--item-2 {
+    background-color: #eece68;
+  } 
+  .loaderArea__loader--item-3 {
+    background-color: #eec368;
+  } 
+  .loaderArea__loader--item-4 {
+    background-color: #eead68;
+  } 
+  .loaderArea__loader--item-5 {
+    background-color: #ee8c68;
+  }
 
-  <script>
-    $(window).on('load', function () {
-      $preloader = $('.loaderArea'),
-      $preloader.fadeOut();
-      $preloader.delay(350).fadeOut('slow');
-    });
-  </script>
-<!-- ---------------------------------------------------------header---------------------------------------------------------------------------- -->
-  <header>
-    <img src="./img/header/logo.png" alt="logo" class="logo">
+  .loaderArea__loader--item-1::before, 
+  .loaderArea__loader--item-2::before, 
+  .loaderArea__loader--item-3::before, 
+  .loaderArea__loader--item-4::before, 
+  .loaderArea__loader--item-5::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+    transform: scale(1);
+  }
+  .loaderArea__loader--item-1::before {
+    background-color: #eed968;
+    animation-delay: 200ms;
+  }
+  .loaderArea__loader--item-2::before {
+    background-color: #eece68;
+    animation-delay: 400ms;
+  }
+  .loaderArea__loader--item-3::before {
+    background-color: #eec368;
+    animation-delay: 600ms;
+  }
+  .loaderArea__loader--item-4::before {
+    background-color: #eead68;
+    animation-delay: 800ms;
+  }
+  .loaderArea__loader--item-5::before {
+    background-color: #ee8c68;
+    animation-delay: 1000ms;
+  }
+</style>
 
-    <nav id="nav">
-      <a href="#main-page" id="main-page-link">Главная</a>
-      <a href="#about-page" id="about-page-link">О нас</a>
-      <a href="#events-page" id="events-page-link">События</a>
-      <a href="#schedule-page" id="schedule-page-link">Расписание</a>
-      <a href="#styles-page" id="styles-page-link">Стили</a>
-    </nav>
+<script>
+  $(window).on('load', function () {
+    $preloader = $('.loaderArea'),
+    $preloader.fadeOut();
+    $preloader.delay(350).fadeOut('slow');
+  });
+</script>
 
-    <section class="icons">
-      <svg class="menu-button" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        width="32px" height="32px" viewBox="0 0 318 318" style="enable-background:new 0 0 318 318;" xml:space="preserve">
-        <g>
-          <path d="M68,3H15C6.729,3,0,9.729,0,18v53c0,8.271,6.729,15,15,15h53c8.271,0,15-6.729,15-15V18C83,9.729,76.271,3,68,3z"/>
-          <path d="M185,3h-53c-8.271,0-15,6.729-15,15v53c0,8.271,6.729,15,15,15h53c8.271,0,15-6.729,15-15V18C200,9.729,193.271,3,185,3z"/>
-          <path d="M303,3h-53c-8.271,0-15,6.729-15,15v53c0,8.271,6.729,15,15,15h53c8.271,0,15-6.729,15-15V18C318,9.729,311.271,3,303,3z"/>
-          <path d="M68,117H15c-8.271,0-15,6.729-15,15v53c0,8.271,6.729,15,15,15h53c8.271,0,15-6.729,15-15v-53C83,123.729,76.271,117,68,117z"/>
-          <path d="M185,117h-53c-8.271,0-15,6.729-15,15v53c0,8.271,6.729,15,15,15h53c8.271,0,15-6.729,15-15v-53C200,123.729,193.271,117,185,117z"/>
-          <path d="M303,117h-53c-8.271,0-15,6.729-15,15v53c0,8.271,6.729,15,15,15h53c8.271,0,15-6.729,15-15v-53C318,123.729,311.271,117,303,117z"/>
-          <path d="M68,232H15c-8.271,0-15,6.729-15,15v53c0,8.272,6.729,15,15,15h53c8.271,0,15-6.728,15-15v-53C83,238.729,76.271,232,68,232z"/>
-          <path d="M185,232h-53c-8.271,0-15,6.729-15,15v53c0,8.272,6.729,15,15,15h53c8.271,0,15-6.728,15-15v-53C200,238.729,193.271,232,185,232z"/>
-          <path d="M303,232h-53c-8.271,0-15,6.729-15,15v53c0,8.272,6.729,15,15,15h53c8.271,0,15-6.728,15-15v-53C318,238.729,311.271,232,303,232z"/>
-        </g>
-      </svg>
-    </section>
 
-  </header>
-<!-- ---------------------------------------------------------backdrops------------------------------------------------------------------------- -->
-  <section id="modal-container" class="modal-backdrop hidden"></section>
+<body>
+  <section id="root">
 
-  <section id="menu-container" class="modal-backdrop hidden"></section>
-
-<!-- ---------------------------------------------------------main------------------------------------------------------------------------------ -->
-  <main>
-    <aside id="sidebar">
-      <nav class="networks">
-        <a href="https://t.me/casaderitmo_academy"><img src="./img/footer/telegram.svg" style="width:32px; height:32px;" alt="Telegram"></a>
-        <a href="https://www.instagram.com/casaderitmo/"><img src="./img/footer/instagram.svg" style="width:32px; height:32px;" alt="Instagram"></a>
-
-        <a href="'https://www.facebook.com/CasaDeRitmo/'">
-          <svg class="facebook-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            width="32px" height="32px" viewBox="0 0 60.734 60.733" style="enable-background:new 0 0 60.734 60.733;" xml:space="preserve">
-            <path d="M57.378,0.001H3.352C1.502,0.001,0,1.5,0,3.353v54.026c0,1.853,1.502,3.354,3.352,3.354h29.086V37.214h-7.914v-9.167h7.914
-              v-6.76c0-7.843,4.789-12.116,11.787-12.116c3.355,0,6.232,0.251,7.071,0.36v8.198l-4.854,0.002c-3.805,0-4.539,1.809-4.539,4.462
-              v5.851h9.078l-1.187,9.166h-7.892v23.52h15.475c1.852,0,3.355-1.503,3.355-3.351V3.351C60.731,1.5,59.23,0.001,57.378,0.001z"/>
-          </svg>
-        </a>
-
-        <a href="https://www.facebook.com/LatinDanceOpenAir/">
-          <svg class="facebook-air" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            width="32px" height="32px" viewBox="0 0 60.734 60.733" style="enable-background:new 0 0 60.734 60.733;" xml:space="preserve">
-            <path d="M57.378,0.001H3.352C1.502,0.001,0,1.5,0,3.353v54.026c0,1.853,1.502,3.354,3.352,3.354h29.086V37.214h-7.914v-9.167h7.914
-              v-6.76c0-7.843,4.789-12.116,11.787-12.116c3.355,0,6.232,0.251,7.071,0.36v8.198l-4.854,0.002c-3.805,0-4.539,1.809-4.539,4.462
-              v5.851h9.078l-1.187,9.166h-7.892v23.52h15.475c1.852,0,3.355-1.503,3.355-3.351V3.351C60.731,1.5,59.23,0.001,57.378,0.001z"/>
-          </svg>
-        </a>
-
-        <a href="https://www.youtube.com/channel/UCsZjPEyhx-mtgmRn4BjXyGw"><img src="./img/footer/youtube.svg" style="width:32px; height:32px;" alt="YouTube"></a>
-
-        <svg class="gMaps-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
-          width="32px" height="32px" fill="#DB4437" viewBox="0 0 257.853 257.853" style="enable-background:new 0 0 257.853 257.853;" xml:space="preserve">
-          <path d="M6.02,103.222V251l11.46,6.37l64.541-40.124l91.35,40.608l7.006-0.484l67.917-42.222l3.54-6.37V61l-11.46-6.37
-            l-64.542,40.124L151.31,83.854c2.407-6.428,3.605-12.365,3.605-17.854c0-36.393-29.607-66-66-66s-66,29.607-66,66
-            c0,6.047,1.453,12.637,4.377,19.829L9.56,96.853L6.02,103.222z M88.915,15c28.166,0,51,22.833,51,51s-51,76-51,76s-51-47.834-51-76
-            S60.748,15,88.915,15z M21.02,107.391l13.04-8.106c4.523,7.653,10.438,15.905,17.777,24.815
-            c13.211,16.039,26.267,28.327,26.816,28.842l10.262,9.624l10.262-9.624c0.549-0.515,13.605-12.803,26.816-28.842
-            c7.944-9.645,14.221-18.519,18.869-26.697l28.51,12.673l7.006-0.484l56.457-35.098v130.116l-61.001,37.923l-91.35-40.608
-            l-7.006,0.484L21.02,237.506V107.391z M118.915,65c0-16.542-13.458-30-30-30s-30,13.458-30,30s13.458,30,30,30
-            S118.915,81.542,118.915,65z M73.915,65c0-8.271,6.729-15,15-15s15,6.729,15,15s-6.729,15-15,15S73.915,73.271,73.915,65z"/>
-        </svg>
-      </nav>
-    </aside> 
-
-    <section id="mainContainer"></section>
-
-  </main>
-<!-- ---------------------------------------------------------to-top-btn------------------------------------------------------------------------ -->
-  <a id="toTopLink" href="#">
-    <svg class="toTopBtn" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-      width="32px" height="32px" fill="#DB4437" viewBox="0 0 155.139 155.139" style="enable-background:new 0 0 155.139 155.139;" xml:space="preserve">
-      <path d="M114.588,45.42h28.17L97.338,0l-45.42,45.42h28.516C76.4,98.937,48.529,142.173,12.381,152.686
-        c5.513,1.605,11.224,2.452,17.071,2.452C73.601,155.139,109.94,107.111,114.588,45.42z"/>
-    </svg>
-  </a>
-<!-- ---------------------------------------------------------footer---------------------------------------------------------------------------- -->
-  <footer>
-    <nav class="networks">
-
-      <a href="https://t.me/casaderitmo_academy"><img src="./img/footer/telegram.svg" style="width:32px; height:32px;" alt="Telegram"></a>
-
-      <a href="https://www.instagram.com/casaderitmo/"><img src="./img/footer/instagram.svg" style="width:32px; height:32px;" alt="Instagram"></a>
-
-      <a href="https://www.facebook.com/CasaDeRitmo/">
-        <svg class="facebook-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          width="32px" height="32px" fill="#4267B2" viewBox="0 0 60.734 60.733" style="enable-background:new 0 0 60.734 60.733;" xml:space="preserve">
-          <path d="M57.378,0.001H3.352C1.502,0.001,0,1.5,0,3.353v54.026c0,1.853,1.502,3.354,3.352,3.354h29.086V37.214h-7.914v-9.167h7.914
-            v-6.76c0-7.843,4.789-12.116,11.787-12.116c3.355,0,6.232,0.251,7.071,0.36v8.198l-4.854,0.002c-3.805,0-4.539,1.809-4.539,4.462
-            v5.851h9.078l-1.187,9.166h-7.892v23.52h15.475c1.852,0,3.355-1.503,3.355-3.351V3.351C60.731,1.5,59.23,0.001,57.378,0.001z"/>
-        </svg>
-      </a>
-
-      <a href="https://www.facebook.com/LatinDanceOpenAir/">
-        <svg class="facebook-air" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          width="32px" height="32px" fill="#4267B2" viewBox="0 0 60.734 60.733" style="enable-background:new 0 0 60.734 60.733;" xml:space="preserve">
-          <path d="M57.378,0.001H3.352C1.502,0.001,0,1.5,0,3.353v54.026c0,1.853,1.502,3.354,3.352,3.354h29.086V37.214h-7.914v-9.167h7.914
-            v-6.76c0-7.843,4.789-12.116,11.787-12.116c3.355,0,6.232,0.251,7.071,0.36v8.198l-4.854,0.002c-3.805,0-4.539,1.809-4.539,4.462
-            v5.851h9.078l-1.187,9.166h-7.892v23.52h15.475c1.852,0,3.355-1.503,3.355-3.351V3.351C60.731,1.5,59.23,0.001,57.378,0.001z"/>
-        </svg>
-      </a>
-
-      <a href="https://www.youtube.com/channel/UCsZjPEyhx-mtgmRn4BjXyGw"><img src="./img/footer/youtube.svg" style="width:32px; height:32px;" alt="YouTube"></a>
-
-      <svg class="gMaps-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
-        width="32px" height="32px" fill="#DB4437" viewBox="0 0 257.853 257.853" style="enable-background:new 0 0 257.853 257.853;" xml:space="preserve">
-        <path d="M6.02,103.222V251l11.46,6.37l64.541-40.124l91.35,40.608l7.006-0.484l67.917-42.222l3.54-6.37V61l-11.46-6.37
-          l-64.542,40.124L151.31,83.854c2.407-6.428,3.605-12.365,3.605-17.854c0-36.393-29.607-66-66-66s-66,29.607-66,66
-          c0,6.047,1.453,12.637,4.377,19.829L9.56,96.853L6.02,103.222z M88.915,15c28.166,0,51,22.833,51,51s-51,76-51,76s-51-47.834-51-76
-          S60.748,15,88.915,15z M21.02,107.391l13.04-8.106c4.523,7.653,10.438,15.905,17.777,24.815
-          c13.211,16.039,26.267,28.327,26.816,28.842l10.262,9.624l10.262-9.624c0.549-0.515,13.605-12.803,26.816-28.842
-          c7.944-9.645,14.221-18.519,18.869-26.697l28.51,12.673l7.006-0.484l56.457-35.098v130.116l-61.001,37.923l-91.35-40.608
-          l-7.006,0.484L21.02,237.506V107.391z M118.915,65c0-16.542-13.458-30-30-30s-30,13.458-30,30s13.458,30,30,30
-          S118.915,81.542,118.915,65z M73.915,65c0-8.271,6.729-15,15-15s15,6.729,15,15s-6.729,15-15,15S73.915,73.271,73.915,65z"/>
-      </svg>
-
-    </nav>
-  </footer>
-<!-- ---------------------------------------------------------end------------------------------------------------------------------------------- -->
+  </section>
 </body>
+
+
 </html>
 

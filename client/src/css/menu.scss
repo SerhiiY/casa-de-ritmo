@@ -9,61 +9,76 @@
 }
 
 #menu {
-  display: flex;
-  flex-direction: column;
+  display: block;
   position: absolute;
   text-align: left;
   top: 0;
   right: 0;
   width: 270px;
-  max-height: 100vh;
-  padding: 10px 20px 10px 20px;
-  background-color: rgba(80,80,80,0.9);
+  background: no-repeat top center;
+  background-image: url('../img/menu/270-600.jpg');
   box-shadow: 0 4px 4px rgba(1, 2, 2, 0.2);
   border-radius: 5px;
-  overflow-y: scroll;
-  &::-webkit-scrollbar {
-    width: 0.5em;
-}
- 
-  &::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  &::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(20,20,20,0.95), rgba(20,20,20,0.9));
   }
-  
-  &::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
-    outline: 1px solid slategrey;
-  }
-
-  section + section {
-    border-top: solid 1px #888;
-    margin-top: 5px;
-  }
-
-  section {
+  .menu-nav {
     display: flex;
+    position: relative;
     flex-direction: column;
-    h4 + a {
-      border-top: solid 1px #888;
+    padding: 10px 20px 10px 20px;
+    max-height: 100vh;
+    overflow-y: scroll;
+  
+    &::-webkit-scrollbar {
+      width: 0.5em;
     }
-    a {
-      text-decoration: none;
-      color: $a-color;
-      &:hover {
-        color: $hover-color;
+  
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: darkgrey;
+      outline: 1px solid slategrey;
+    }
+
+    section + section {
+      border-top: solid 1px #888;
+      margin-top: 5px;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      h4 + a {
+        border-top: solid 1px #888;
       }
-      &:active {
+      a {
+        text-decoration: none;
+        color: $a-color;
+        &:hover {
+          color: $hover-color;
+        }
+        &:active {
+          color: $click-color;
+        }
+      }
+
+      h4 {
+        margin: 2px auto 3px auto;
+        letter-spacing: 3px;
         color: $click-color;
       }
     }
-
-    h4 {
-      margin: 2px auto 3px auto;
-      letter-spacing: 3px;
-      color: $click-color;
-    }
-  }
-
+  }//menu-nav
 }
 
 // mobile-landscape and tablet-potrait

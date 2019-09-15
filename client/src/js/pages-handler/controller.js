@@ -8,11 +8,9 @@ export default class Controller {
     this.menuBtn = document.querySelector('.menu-button');
     this.gMapsBtn = {
       link: document.querySelectorAll('.gMaps-icon'), 
-      pageDOM: this.view.gMapsDOM, 
+      pageDOM: this.view.gMaps, 
       placeToRender: this.view.modalContainer
     }
-
-    this.view.init();
 
     this.menu = document.querySelector('#menu');
 
@@ -35,7 +33,7 @@ export default class Controller {
   addLinkClickListener(params) {
     const pageURL = params.hasOwnProperty("pageURL") ? params.pageURL : null;
     const pageDOM = params.hasOwnProperty("pageDOM") ? params.pageDOM : null;
-    const placeToRender = params.hasOwnProperty("placeToRender") ? params.placeToRender : this.view.mainContainer;
+    const placeToRender = params.hasOwnProperty("placeToRender") ? params.placeToRender : this.view.modalContainer;
     const links = Array.from(params.link);
 
     links.forEach(link => {
@@ -56,6 +54,7 @@ export default class Controller {
   hideModalOnClick (modal) {  
     modal.addEventListener('click', (event) => {
       const target = event.target;
+      console.log(target.id);
       if(target.id === "menu-container" || target.className === "page-link") return this.view.hideMenu(this.menu);
       if(target.id === "modal-container") return this.view.hideModal(this.view.modalContainer);
     });//modalEventListener
@@ -68,15 +67,10 @@ export default class Controller {
     this.addLinkClickListener(this.gMapsBtn);
   }//addButtonsClickListeners
 
-  addLinksClickListeners() {
-
-  }
-
   init() {
     this.hideModalOnClick(this.view.modalContainer);
     this.hideModalOnClick(this.view.menuContainer);
     this.addButtonsClickListeners();
-    this.addLinksClickListeners();
   }
 
 }//class controller------------------------------------------------------------------------------------------------------------------

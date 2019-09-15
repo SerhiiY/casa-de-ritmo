@@ -1,10 +1,23 @@
 footer {
+  display: block;
+  position: relative;
   box-sizing: border-box;
   display: block;
   text-align: center;
   width: 100%;
-  background-color: rgba(80,80,80,0.3);
+  margin-top: 30px;
   padding: 10px 20px;
+  z-index: 1;
+  &::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+  }
 
   .networks {
     display: flex;
@@ -75,7 +88,7 @@ footer {
 // tablet-landscape and small laptops
 @media only screen and (min-width: 768px) {
   footer {
-    display: none;
+    // display: none;
   }
 }
 // laptops and desktop
