@@ -31,7 +31,7 @@ body {
     height: 120vh;
     overflow: hidden;
     background: top center no-repeat fixed;
-    background-image: url('../img/body/bg-480.jpg');
+    background-image: url('../img/body/bg-500.jpg');
   }
   a{
     font-size: 120%;
@@ -72,7 +72,7 @@ body {
 //--------------------------------------------------------------------------
 
 // mobile-landscape and tablet-potrait
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 500px) {
   body {
     &::before {
       background-image: url('../img/body/bg-1024.jpg'); 
@@ -81,27 +81,27 @@ body {
 } // media 480
 
 // tablet-landscape and small laptops
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1024px) {
   body {
     &::before {
-      background-image: url('../img/body/bg-1920.jpg'); 
+      background-image: url('../img/body/bg-1440.jpg'); 
     }  
   }
 } // media 768
 
 // laptops and desktop
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1441px) {
   body {
-
+    &::before {
+      background-image: url('../img/body/bg-2160.jpg'); 
+    }  
   }
 } // media 1200
 
-
-// 2k
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 2161px) {
   body {
     &::before {
       background-image: url('../img/body/bg-2560.jpg'); 
     }  
   }
-} // media 2k
+} // media 1200

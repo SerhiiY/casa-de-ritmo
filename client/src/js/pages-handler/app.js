@@ -53,7 +53,7 @@ const App = () => {
           <Route component={NotFoundPage} />
         </Switch>
       </main>
-      <a id="toTopLink" href="#toTop">
+      <a id="toTopLink">
         <svg className="toTopBtn" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
           x="0px" y="0px" width="32px" height="32px" fill="#DB4437" viewBox="0 0 155.139 155.139"
           style={{ enableBackground: "new 0 0 155.139 155.139" }} xmlSpace="preserve">
