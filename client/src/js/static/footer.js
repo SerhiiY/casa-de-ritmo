@@ -5,7 +5,7 @@ const Footer = () => (
   //------------------------------HTML----------------------------------------------------
   
 <footer>
-  <nav class="networks">
+  <nav className="networks">
 
     <a href="https://t.me/casaderitmo_academy"><img src="./img/footer/telegram.svg" style={{ width: "32px", height: "32px" }} alt="Telegram"/></a>
 
