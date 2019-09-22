@@ -11,11 +11,11 @@ $phone = $_POST['phone'];
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.mail.ru';  																							// Specify main and backup SMTP servers
+$mail->Host = 'smtp.gmail.com';  																							// Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'serzh.yyy83@mail.ru'; // Ваш логин от почты с которой будут отправляться письма
-$mail->Password = 'XeEM7XR4snyYGpE'; // Ваш пароль от почты с которой будут отправляться письма
-$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Username = 'casa.de.ritmo.2019@gmail.com'; // Ваш логин от почты с которой будут отправляться письма
+$mail->Password = 'cas-13243546-DE'; // Ваш пароль от почты с которой будут отправляться письма
+$mail->SMTPSecure = 'TLS';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
 $mail->setFrom('serzh.yyy83@mail.ru'); // от кого будет уходить письмо?
@@ -29,7 +29,7 @@ $mail->addAddress('dj.ser961@gmail.com');     // Кому будет уходи�
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Заявка на звонок с сайта Casa de Ritmo';
-$mail->Body    = '' .$name . ' оставил заявку на звонок, его телефон ' .$phone . ', его email' .$email;
+$mail->Body    = '' .$name. ' оставил заявку на звонок, его телефон ' .$phone. ', его email' .$email. '';
 $mail->AltBody = '';
 
 if(!$mail->send()) {
