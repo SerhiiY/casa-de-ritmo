@@ -44,6 +44,9 @@ const Footer = () => (
     </svg>
 
   </nav>
+
+  <a className="old-site" href="http://casaderitmo.com.ua/">Перейти на старую версию сайта</a>
+    
 </footer>
 
 

@@ -8,7 +8,9 @@ const mainPage = () => (
       <section className="join-us__content">
         <h1>Добро пожаловать в CasaDeRitmo!</h1>
         <p className="p1">Начать танцевать легко! Приходите к нам, научитесь танцевать — и вы почувствуете, как вместе с танцем в вашу жизнь войдут бодрость, ритм и позитив</p>
-        <button className="join-us__content--btn"><p className="p1">Записаться на бесплатное занятие</p></button>
+        <button className="join-us__content--btn">
+          <p className="p1">Записаться на бесплатное занятие</p>
+        </button>
       </section>
     </article>
 

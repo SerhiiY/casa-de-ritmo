@@ -9,7 +9,10 @@ export default class Controller {
     this.gMapsBtn = {
       link: document.querySelectorAll('.gMaps-icon'), 
       pageDOM: this.view.gMaps, 
-      placeToRender: this.view.modalContainer
+    }
+    this.joinBtn = {
+      link: document.querySelectorAll('.join-us__content--btn'),
+      pageDOM: this.view.joinUs,
     }
 
     this.menu = document.querySelector('#menu');
@@ -54,8 +57,8 @@ export default class Controller {
   hideModalOnClick (modal) {  
     modal.addEventListener('click', (event) => {
       const target = event.target;
-      console.log(target.id);
-      if(target.id === "menu-container" || target.className === "page-link") return this.view.hideMenu(this.menu);
+
+      if (target.id === "menu-container" || target.className === "page-link") return this.view.hideMenu(this.menu);
       if(target.id === "modal-container") return this.view.hideModal(this.view.modalContainer);
     });//modalEventListener
   } //hideMOdalonClick
@@ -65,6 +68,7 @@ export default class Controller {
   addButtonsClickListeners() {
     this.menuBtn.addEventListener('click', () => this.view.showMenu(this.menu));//btnEventListener
     this.addLinkClickListener(this.gMapsBtn);
+    this.addLinkClickListener(this.joinBtn);
   }//addButtonsClickListeners
 
   init() {

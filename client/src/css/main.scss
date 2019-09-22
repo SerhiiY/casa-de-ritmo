@@ -90,8 +90,9 @@ main {
     .join-us {
       display: block;
       position: relative;
-      background: no-repeat top center fixed;
+      background: no-repeat center top fixed;
       background-image: url('../img/main-page/join-us-768.jpg');
+      background-position-y: 10%;
       text-align: center;
       padding: 0;
       width: 100%;
@@ -268,6 +269,10 @@ main {
           }
         }
       }//main-page-list
+      .join-us {
+        background-image: url('../img/main-page/join-us-1024.jpg');
+      }//join-us
+
     }//#main-page
     #schedule-page {
       img {
@@ -280,7 +285,7 @@ main {
 }//media 480
 
 // tablet-landscape and small laptops
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1025px) {
   main {
     #main-page {
       .mainPageList{
@@ -291,7 +296,7 @@ main {
         }
       }
       .join-us {
-        background-image: url('../img/main-page/join-us-1024.jpg');
+        background-image: url('../img/main-page/join-us-1440.jpg');
       }//join-us
     } //main-page
 
@@ -310,7 +315,7 @@ main {
 }//media 768
 
 // laptops and desktop
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1441px) {
   main {
     #main-page {
       .mainPageList {
@@ -326,7 +331,7 @@ main {
         
       }//main-page-list
       .join-us {
-        background-image: url('../img/main-page/join-us-1440.jpg');
+        background-image: url('../img/main-page/join-us-1920.jpg');
       }//join-us
     }//main-page
     #schedule-page {
@@ -338,13 +343,13 @@ main {
 }//media 1024
 
 //wide screen
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 2161px) {
   main {
     #main-page {
 
-      .join-us {
-        background-image: url('../img/main-page/join-us-1920.jpg');
-      }//join-us
+      // .join-us {
+      //   background-image: url('../img/main-page/join-us-1920.jpg');
+      // }//join-us
     }
   }
 }//wide screen

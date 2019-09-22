@@ -7,9 +7,13 @@ export default function () {
       $('#toTopLink').fadeOut();
     }
   });
-  $('a').click(function() {
-    $('body,html').animate({scrollTop:-100},500);
-  });
+  document.body.addEventListener('click', (evt) => {
+    const target = evt.target;
+    if(target.nodeName == "A" || target.closest('.toTopBtn') || target.closest('.logo')) $('body,html').animate({scrollTop:-100},500);
+  })
+  // $('a').click(function() {
+  //   $('body,html').animate({scrollTop:-100},500);
+  // });
 }
 
 

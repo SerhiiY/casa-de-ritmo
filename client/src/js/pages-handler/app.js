@@ -55,7 +55,7 @@ const App = () => {
       </main>
       <a id="toTopLink">
         <svg className="toTopBtn" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-          x="0px" y="0px" width="32px" height="32px" fill="#DB4437" viewBox="0 0 155.139 155.139"
+          x="0px" y="0px" width="32px" height="32px" viewBox="0 0 155.139 155.139"
           style={{ enableBackground: "new 0 0 155.139 155.139" }} xmlSpace="preserve">
           <path d="M114.588,45.42h28.17L97.338,0l-45.42,45.42h28.516C76.4,98.937,48.529,142.173,12.381,152.686
             c5.513,1.605,11.224,2.452,17.071,2.452C73.601,155.139,109.94,107.111,114.588,45.42z"/>

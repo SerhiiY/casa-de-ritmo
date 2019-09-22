@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
 
 import gMaps from '../modals/gMaps.js';
+import joinUs from '../modals/joinUs.js';
 
 export default class View {
   constructor() {
@@ -8,6 +9,7 @@ export default class View {
     this.menuContainer = document.querySelector('#menu-container');
 
     this.gMaps = gMaps;
+    this.joinUs = joinUs;
   }
 
   render(itemToRender, placeToRender){

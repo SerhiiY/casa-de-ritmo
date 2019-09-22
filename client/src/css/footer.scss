@@ -19,6 +19,14 @@ footer {
     background: rgba(0,0,0,0.5);
   }
 
+  .old-site {
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 15px;
+  }
+
   .networks {
     display: flex;
     flex-direction: row;
@@ -26,7 +34,7 @@ footer {
     max-width: calc(36px * 6 + 60px);
     justify-content: space-between;
     align-items: center;
-    margin: auto;
+    margin: 5px auto 40px auto;
     
     a, svg {
       display: block;
@@ -50,29 +58,29 @@ footer {
     }
   }
 
-  #nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 700px;
-    margin: auto auto;
-    animation: nav 1s;
+  // #nav {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-items: center;
+  //   justify-content: space-around;
+  //   flex-wrap: wrap;
+  //   max-width: 700px;
+  //   margin: auto auto;
+  //   animation: nav 1s;
 
-     a {
-      margin: 5px;
-      text-decoration: none;
-      color: $a-color;
-      &:hover {
-        color: $hover-color;
-      }
-      &:active {
-        color: $click-color;
-      }
-    }
-  } // nav
+  //    a {
+  //     margin: 5px;
+  //     text-decoration: none;
+  //     color: $a-color;
+  //     &:hover {
+  //       color: $hover-color;
+  //     }
+  //     &:active {
+  //       color: $click-color;
+  //     }
+  //   }
+  // } // nav
 } // footer
 
 //--------------------------------------------------------------------------
